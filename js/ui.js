@@ -1,7 +1,7 @@
 // For the Data (UI Layer)
 
 
-function displayWeather(data){
+export function displayWeather(data){
     const result = document.getElementById("weatherResult")
 
     result.innerHTML = `
@@ -11,7 +11,7 @@ function displayWeather(data){
     `
 }
 
-function showError(message){
+export function showError(message){
     const result = document.getElementById("weatherResult")
     result.innerHTML = `<p class="text-red-500">${message}</p>`
 }
