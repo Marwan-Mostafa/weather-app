@@ -1,4 +1,4 @@
-// For API call
+// For API call (API Layer)
 
 const API_KEY = "The key"
 
