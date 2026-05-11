@@ -1,4 +1,3 @@
-// For API call (API Layer)
 
 const API_KEY = "643421c688364413889183021261105"
 const BASE_URL = "https://api.weatherapi.com/v1/current.json";
@@ -28,14 +27,14 @@ export async function getWeather(city) {
         }
         const data = await response.json()
         return {
-            city: data.name,
-            country: data.sys.country,
-            temp: data.main.temp,
-            feels_like: data.main.feels_like,
-            humidity: data.main.humidity,
-            description: data.weather?.[0]?.description,
-            icon: data.weather?.[0]?.icon,
-            wind: data.wind.speed,
+            city: data.location.name,
+            country: data.location.country,
+            temp:data.current.temp_c,
+            feels_like: data.current.feelslike_c,
+            humidity: data.current.humidity,
+            description: data.current.condition.text,
+            icon: data.current.condition.icon,
+            wind: data.current.wind_kph,
     }
         } catch (error) {
         if (error.name === "AbortError") {

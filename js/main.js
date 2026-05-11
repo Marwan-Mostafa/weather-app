@@ -1,6 +1,6 @@
 // For General Control
-import { getWeather } from "./js/api.js"
-import { showError, displayWeather, showLoading } from "./js/ui.js"
+import { getWeather } from "./api.js"
+import { showError, displayWeather, showLoading } from "./ui.js"
 
 const btn = document.getElementById("searchBtn")
 const input = document.getElementById("searchInput")
@@ -21,7 +21,7 @@ async function handleWeather() {
     isLoading = true
 
     try {
-        showLoading(true)
+        showLoading()
         
         const data = await getWeather(city)
 
@@ -33,12 +33,11 @@ async function handleWeather() {
         showError(error.message)
     } finally{
         isLoading = false
-        showLoading(false)
     }
 }
 
 
-btn.addEventListener("click", handleWeather)
+btn.addEventListener("click", handleWeather);
 
 input.addEventListener("keydown", (e)=>{
     if(e.key === "Enter"){

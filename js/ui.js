@@ -1,13 +1,9 @@
-// For the Data (UI Layer)
 
 
 export function displayWeather(data){
     const result = document.getElementById("weatherResult")
 
-    const {name, weather, main, wind, sys} = data
-
-    const icon = weather[0].icon
-    const description = weather[0].description
+    const {city, temp, description, icon, humidity, wind, feels_like} = data
 
     result.innerHTML =`
     
@@ -31,7 +27,7 @@ export function displayWeather(data){
 
                     <div>
                         <h2 class="text-3xl font-bold text-white">
-                            ${name}
+                            ${city}
                         </h2>
 
                         <p class="text-gray-300 capitalize mt-1">
@@ -49,11 +45,11 @@ export function displayWeather(data){
                 <div class="mt-6">
 
                     <h1 class="text-6xl font-black text-white">
-                        ${Math.round(main.temp)}°
+                        ${Math.round(temp)}°
                     </h1>
 
                     <p class="text-gray-300 mt-2">
-                        Feels like ${Math.round(main.feels_like)}°
+                        Feels like ${Math.round(feels_like)}°
                     </p>
 
                 </div>
@@ -67,7 +63,7 @@ export function displayWeather(data){
                         </p>
 
                         <h3 class="text-2xl font-bold text-white mt-1">
-                            ${main.humidity}%
+                            ${humidity}%
                         </h3>
                     </div>
 
@@ -77,30 +73,9 @@ export function displayWeather(data){
                         </p>
 
                         <h3 class="text-2xl font-bold text-white mt-1">
-                            ${wind.speed} km/h
+                            ${wind} km/h
                         </h3>
                     </div>
-
-                    <div class="bg-white/10 rounded-2xl p-4">
-                        <p class="text-gray-400 text-sm">
-                            Min Temp
-                        </p>
-
-                        <h3 class="text-2xl font-bold text-white mt-1">
-                            ${Math.round(main.temp_min)}°
-                        </h3>
-                    </div>
-
-                    <div class="bg-white/10 rounded-2xl p-4">
-                        <p class="text-gray-400 text-sm">
-                            Max Temp
-                        </p>
-
-                        <h3 class="text-2xl font-bold text-white mt-1">
-                            ${Math.round(main.temp_max)}°
-                        </h3>
-                    </div>
-
                 </div>
 
             </div>
