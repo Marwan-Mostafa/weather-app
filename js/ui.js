@@ -11,3 +11,7 @@ function displayWeather(data){
     `
 }
 
+function showError(message){
+    const result = document.getElementById("weatherResult")
+    result.innerHTML = `<p class="text-red-500">${message}</p>`
+}
