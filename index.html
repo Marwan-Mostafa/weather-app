@@ -8,16 +8,38 @@
         <title>Weather App</title>
     </head>
     <body class="w-screen h-screen flex justify-center items-center bg-gray-900 text-white">
-        <div class="bg-gray-800 p-8 w-96 rounded-2xl text-center">
+        <div class="bg-gray-800 p-8 w-96 h-50 rounded-2xl text-center flex flex-col justify-around">
 
             <h1 class="text-2xl font-bold mb-4">Weather App</h1>
-
+            
+            <div class="bg-red-400 flex justify-around">
+                
             <input 
                 id="searchInput" type="text" placeholder="Enter the city"
-                class="w-full p-2 rounded text-black"
+                class="p-2 rounded text-black outline-none"
             >
 
-            <button class="mt-4 bg-blue-600 px-4 py-2 rounded w-full searchBtn">Search</button>
+            <button
+                class="group relative mt-4 flex h-12 w-40 items-center justify-center gap-2 overflow-hidden rounded-2xl
+                bg-linear-to-r from-sky-400 via-blue-500 to-indigo-700
+                px-6 py-3 font-bold tracking-wide text-white
+                shadow-[0_10px_30px_rgba(37,99,235,0.35)]
+                transition-all duration-300
+                hover:-translate-y-1 hover:scale-105
+                hover:shadow-[0_20px_40px_rgba(37,99,235,0.45)]
+                active:scale-95 cursor-pointer"
+                >
+
+                <span
+                    class="absolute left-[-120%] top-0 h-full w-[120%]
+                    rotate-12 bg-white/20 transition-all duration-700
+                    group-hover:left-[120%]"
+                ></span>
+
+                <span class="relative z-10">Search</span>
+                </button>
+                
+            </div>
 
             <div id="weatherResult" class="mt-6"></div>
         </div>
