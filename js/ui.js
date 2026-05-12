@@ -1,88 +1,62 @@
 
 
-export function displayWeather(data){
+export function displayWeather(data) {
     const result = document.getElementById("weatherResult")
 
-    const {city, temp, description, icon, humidity, wind, feels_like} = data
+    const { city, temp, description, icon, humidity, wind, feels_like } = data
 
-    result.innerHTML =`
+    result.innerHTML = `
     
-            <div
-                class="
-                mt-8
-                w-full
-                rounded-3xl
-                bg-white/10
-                backdrop-blur-xl
-                border border-white/10
-                p-6
+            <div class="mt-16 w-full rounded-[2rem] bg-white/20 backdrop-blur-md border border-white/20
+                p-8 shadow-2xl animate-fadeIn text-white">
 
-                shadow-[0_10px_40px_rgba(0,0,0,0.25)]
-
-                animate-fadeIn
-                "
-            >
-
-                <div class="flex items-center justify-between">
+                <div class="flex items-start justify-between">
 
                     <div>
-                        <h2 class="text-3xl font-bold text-white">
-                            ${city}
-                        </h2>
+                        <h2 class="text-4xl font-bold tracking-tight">${city}</h2>
 
-                        <p class="text-gray-300 capitalize mt-1">
+                        <p class="text-sky-300 font-medium text-lg mt-1 capitalize">
                             ${description}
                         </p>
                     </div>
 
-                    <img
-                        src="https://openweathermap.org/img/wn/${icon}@2x.png"
-                        alt="weather icon"
-                        class="w-24 h-24"
-                    />
+                    <div class="bg-white/10 rounded-2xl p-2 backdrop-blur-lg border border-white/10">
+                    
+                    <img src="https://openweathermap.org/img/wn/${icon}@2x.png" alt="weather icon" class="w-20 h-20 object-contain"/>
+                    </div>
                 </div>
 
-                <div class="mt-6">
+                <div class="my-10 text-center">
+                    <div class="relative inline-block">
+                        <span class="text-8xl font-black tracking-tighter">
+                            ${Math.round(temp)}
+                        </span>
+                    </div>
 
-                    <h1 class="text-6xl font-black text-white">
-                        ${Math.round(temp)}°
-                    </h1>
-
-                    <p class="text-gray-300 mt-2">
-                        Feels like ${Math.round(feels_like)}°
+                    <p class="text-gray-400 text-lg mt-2 font-light">
+                        Feels like <span class="text-white font-semibold">${Math.round(feels_like)}</span>
                     </p>
 
                 </div>
 
 
-                <div class="grid grid-cols-2 gap-4 mt-8">
-
-                    <div class="bg-white/10 rounded-2xl p-4">
-                        <p class="text-gray-400 text-sm">
-                            Humidity
-                        </p>
-
-                        <h3 class="text-2xl font-bold text-white mt-1">
-                            ${humidity}%
-                        </h3>
-                    </div>
-
-                    <div class="bg-white/10 rounded-2xl p-4">
-                        <p class="text-gray-400 text-sm">
-                            Wind Speed
-                        </p>
-
-                        <h3 class="text-2xl font-bold text-white mt-1">
-                            ${wind} km/h
-                        </h3>
-                    </div>
+                <div class="grid grid-cols-2 gap-4">
+                <div class="bg-black/20 rounded-3xl p-5 border border-white/5 flex flex-col items-center justify-center">
+                    <span class="text-gray-400 text-xs uppercase tracking-widest mb-1 font-bold">Humidity</span>
+                    <span class="text-2xl font-bold">${humidity}%</span>
                 </div>
+                
+                <div class="bg-black/20 rounded-3xl p-5 border border-white/5 flex flex-col items-center justify-center">
+                    <span class="text-gray-400 text-xs uppercase tracking-widest mb-1 font-bold">Wind Speed</span>
+                    <span class="text-2xl font-bold">${wind} <small class="text-xs">km/h</small></span>
+                </div>
+            </div>
 
             </div>
         `
 }
 
-export function showError(message){
+export function showError(message) {
     const result = document.getElementById("weatherResult")
     result.innerHTML = `
         <div

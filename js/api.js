@@ -33,7 +33,7 @@ export async function getWeather(city) {
             feels_like: data.current.feelslike_c,
             humidity: data.current.humidity,
             description: data.current.condition.text,
-            icon: data.current.condition.icon,
+            icon: `http:${data.current.condition.icon}`,
             wind: data.current.wind_kph,
     }
         } catch (error) {

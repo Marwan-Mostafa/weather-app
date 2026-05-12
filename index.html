@@ -8,7 +8,7 @@
         <title>Weather App</title>
     </head>
     <body class="w-screen h-screen flex justify-center items-center bg-gray-900 text-white">
-        <div class="bg-gray-800 p-8 w-120 h-50 rounded-2xl text-center flex flex-col justify-around">
+        <div class="bg-gray-800 p-8 w-150 h-150 rounded-2xl text-center flex flex-col justify-around items-center">
 
             <h1
                 class="relative mb-6 text-center text-4xl font-extrabold tracking-wide text-white
@@ -21,66 +21,66 @@
 
                 </h1>
 
-            <div class="flex justify-evenly items-center">
-            <input 
-                id="searchInput"
-                type="text"
-                placeholder="Enter the city..."
-                
-                class="
-                text-center
-                w-[250px]
-                h-12
-                rounded-2xl
-                border border-white/20
-                bg-white/10
-                backdrop-blur-lg
+            <div class="flex gap-20 items-center">
+                <input 
+                    id="searchInput"
+                    type="text"
+                    placeholder="Enter the city..."
+                    
+                    class="
+                    text-center
+                    w-[250px]
+                    h-12
+                    rounded-2xl
+                    border border-white/20
+                    bg-white/10
+                    backdrop-blur-lg
 
-                px-5
-                text-white
-                placeholder:text-white/60
-                placeholder:px-4
-                text-[15px]
-                font-medium
-                tracking-wide
+                    px-5
+                    text-white
+                    placeholder:text-white/60
+                    placeholder:px-4
+                    text-[15px]
+                    font-medium
+                    tracking-wide
 
-                outline-none
-                transition-all
-                duration-300
+                    outline-none
+                    transition-all
+                    duration-300
 
-                shadow-[0_8px_25px_rgba(0,0,0,0.15)]
+                    shadow-[0_8px_25px_rgba(0,0,0,0.15)]
 
-                focus:border-sky-400
-                focus:ring-3
-                focus:ring-sky-400/30
-                focus:bg-white/15
-                hover:bg-white/15
-                hover:shadow-[0_12px_30px_rgba(37,99,235,0.25)]
-                "
-            />
+                    focus:border-sky-400
+                    focus:ring-3
+                    focus:ring-sky-400/30
+                    focus:bg-white/15
+                    hover:bg-white/15
+                    hover:shadow-[0_12px_30px_rgba(37,99,235,0.25)]
+                    "
+                />
 
-            <button
-                id="searchBtn"
-                class="group relative mt-4 flex h-12 w-40 items-center justify-center gap-2 overflow-hidden rounded-2xl
-                bg-linear-to-r from-sky-400 via-blue-500 to-indigo-700
-                px-6 py-3 font-bold tracking-wide text-white
-                shadow-[0_10px_30px_rgba(37,99,235,0.35)]
-                transition-all duration-300
-                hover:-translate-y-1 hover:scale-102
-                hover:shadow-[0_20px_40px_rgba(37,99,235,0.45)]
-                active:scale-95 cursor-pointer"
-                >
-                <span
-                class="absolute left-[-120%] top-0 h-full w-[120%]
-                rotate-12 bg-white/20 transition-all duration-700
-                group-hover:left-[120%]"
-                ></span>
-                
-                <span class="relative z-10">Search</span>
-            </button>
-        </div>
+                <button
+                    id="searchBtn"
+                    class="group relative mt-4 flex h-12 w-40 items-center justify-center gap-2 overflow-hidden rounded-2xl
+                    bg-linear-to-r from-sky-400 via-blue-500 to-indigo-700
+                    px-6 py-3 font-bold tracking-wide text-white
+                    shadow-[0_10px_30px_rgba(37,99,235,0.35)]
+                    transition-all duration-300
+                    hover:-translate-y-1 hover:scale-102
+                    hover:shadow-[0_20px_40px_rgba(37,99,235,0.45)]
+                    active:scale-95 cursor-pointer"
+                    >
+                    <span
+                    class="absolute left-[-120%] top-0 h-full w-[120%]
+                    rotate-12 bg-white/20 transition-all duration-700
+                    group-hover:left-[120%]"
+                    ></span>
+                    
+                    <span class="relative z-10">Search</span>
+                </button>
+            </div>
 
-            <div id="weatherResult" class="mt-6"></div>
+            <div id="weatherResult" class="mt-25 w-120"></div>
         </div>
         <script type="module" src="./js/main.js"></script>
     </body>
