@@ -6,8 +6,8 @@ export function displayWeather(data) {
     const { city, temp, icon, humidity, wind } = data
 
     result.innerHTML = `
-            <div class="group relative w-full min-w-100 mx-auto rounded-[2rem] bg-white/5 text-white shadow-lg 
-            flex flex-col items-center justify-around gap-4 mt-2 backdrop-blur-2xl transition-all duration-500 hover:shadow-[0_20px_80px_rgba(56,189,248,0.2)]">
+            <div class="group relative w-full min-w-100 mx-auto rounded-[2rem] text-white
+            flex flex-col items-center justify-around gap-4 mt-2">
 
                 <!-- City -->
 
