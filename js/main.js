@@ -13,7 +13,7 @@ async function handleWeather() {
     const city = input.value.trim()
 
     if (!city) {
-        showError("Please enter a city name")
+        showError("Please enter the city")
         return
     }
     if(isLoading) return

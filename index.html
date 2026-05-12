@@ -7,11 +7,12 @@
         <link rel="stylesheet" href="./styles/style.css">
         <title>Weather App</title>
     </head>
-    <body class="w-screen h-screen flex justify-center items-center bg-gray-900 text-white">
-        <div class="bg-gray-800 p-8 w-150 h-150 rounded-2xl text-center flex flex-col justify-around items-center">
+    <body class="min-h-screen flex justify-center items-center bg-gray-900 text-white px-4 py-8 sm:px-6 lg:px-8 overflow-x-hidden">
+        
+        <div class="relative w-full max-w-md rounded-[2.5rem] border border-white/10 bg-white/10 p-5 sm:p-8 lg:p-10 backdrop-blur-2xl h-150 text-center flex flex-col justify-around items-center">
 
             <h1
-                class="relative mb-6 text-center text-4xl font-extrabold tracking-wide text-white
+                class="relative mb-6 text-center text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-wide text-white
                 drop-shadow-[0_4px_15px_rgba(255,255,255,0.25)]">
                 
                 <span
@@ -21,20 +22,9 @@
 
                 </h1>
 
-            <div class="flex gap-20 items-center">
-                <input 
-                    id="searchInput"
-                    type="text"
-                    placeholder="Enter the city..."
-                    
-                    class="
-                    text-center
-                    w-[250px]
-                    h-12
-                    rounded-2xl
-                    border border-white/20
-                    bg-white/10
-                    backdrop-blur-lg
+            <div class="mt-8 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-center items-center">
+                <input id="searchInput" type="text" placeholder="Enter the city..."
+                    class="text-center w-full sm:flex-1 h-12 rounded-2xl border border-white/20 bg-white/10 backdrop-blur-lg
 
                     px-5
                     text-white
@@ -61,7 +51,7 @@
 
                 <button
                     id="searchBtn"
-                    class="group relative mt-4 flex h-12 w-40 items-center justify-center gap-2 overflow-hidden rounded-2xl
+                    class="group relative flex h-12 w-full sm:w-40 items-center justify-center gap-2 overflow-hidden rounded-2xl
                     bg-linear-to-r from-sky-400 via-blue-500 to-indigo-700
                     px-6 py-3 font-bold tracking-wide text-white
                     shadow-[0_10px_30px_rgba(37,99,235,0.35)]
