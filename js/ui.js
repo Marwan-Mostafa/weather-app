@@ -54,17 +54,8 @@ export function displayWeather(data) {
 export function showError(message) {
     const result = document.getElementById("weatherResult")
     result.innerHTML = `
-        <div
-            class="
-            mt-6
-            bg-red-500/10
-            border border-red-500/20
-            text-red-300
-            p-4
-            rounded-2xl
-            backdrop-blur-lg
-            "
-        >
+        <div class=" mt-6 bg-red-500/10 border border-red-500/20 text-red-300
+            p-4 rounded-2xl backdrop-blur-lg">
             ${message}
         </div>
     `
@@ -78,18 +69,8 @@ export function showLoading() {
     
         <div class="mt-8 flex justify-center">
 
-            <div
-                class="
-                w-14
-                h-14
-                border-4
-                border-sky-400
-                border-t-transparent
-                rounded-full
-                animate-spin
-                "
-            ></div>
-
+            <div class="w-14 h-14 border-4 border-sky-400 border-t-transparent
+                rounded-full animate-spin"></div>
         </div>
     `
 }
